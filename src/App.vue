@@ -259,7 +259,7 @@
             <v-col class="text-center" cols="12">
               <strong
                 >{{ new Date().getFullYear() }}
-                <a href="" class="green--text">Web Burden</a>
+                <a href="" class="green--text"></a>
               </strong>
             </v-col>
           </v-footer>
