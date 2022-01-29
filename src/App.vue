@@ -1,9 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-app-bar app elevation="0">
-      <v-subheader
-        ><h1 class="green--text"><span class="pink--text"></span></h1
-      ></v-subheader>
+      <img class="logo pt-5" :src="require('/src/assets/logo-jr.png')" />
       <v-tabs
         center-active
         right
@@ -19,7 +17,6 @@
       TODO:crear la funcionalidad enviar correo electronio
       <v-btn large color="green" class="white--text ml-10"
         >Envíame un correo electrónico</v-btn
-        
       >
     </v-app-bar>
     <v-main style="background-color: #f5f5f5">
@@ -62,20 +59,13 @@
             </v-row>
           </v-col>
           <v-col lg="6" cols="6">
-              TODO:FOTO DE PERFIL
-            <v-img
-              
-            ></v-img>
+            TODO:FOTO DE PERFIL
+            <v-img></v-img>
           </v-col>
         </v-row>
       </section>
       <section class="about-me" id="about">
-        <v-img
-          class="pa-10"
-          height="600"
-          gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.8)"
-          src="https://previews.123rf.com/images/klss/klss1703/klss170300252/75798249-ilustraci%C3%B3n-3d-del-desarrollador-del-script-del-programador-de-c%C3%B3digo-fuente-del-equipo-en-un-fondo-.jpg"
-        >
+        <v-img class="pa-10 color" height="600">
           <v-row justify="center" class="align-center">
             <v-col lg="6" cols="6">
               <v-card
@@ -168,36 +158,30 @@
           </v-row>
         </v-container>
       </section>
-      <section class="experiance py-6">
-        <v-img
-          class="pa-10"
-          gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-          src="https://designshack.net/wp-content/uploads/Home-office.jpg"
-        >
-          <v-container>
-            <h4 class="display-2 text-center">Experience</h4>
-            <v-timeline>
-              <v-timeline-item
-                v-for="(exper, index) in experience"
-                :key="index"
-                :color="index % 2 === 0 ? 'pink' : 'green'"
-              >
-                <v-card class="rounded-xl">
-                  <v-card-title :color="index % 2 === 0 ? 'pink' : 'green'">
-                    {{ exper.title }}
-                  </v-card-title>
-                  <v-card-text>
-                    <b>{{ exper.date }}</b
-                    ><br />
-                    <b>@{{ exper.institute }}</b
-                    ><br />
-                    {{ exper.decription }}
-                  </v-card-text>
-                </v-card>
-              </v-timeline-item>
-            </v-timeline>
-          </v-container>
-        </v-img>
+      <section class="experiance color py-6">
+        <v-container>
+          <h4 class="display-2 text-center">Experience</h4>
+          <v-timeline>
+            <v-timeline-item
+              v-for="(exper, index) in experience"
+              :key="index"
+              :color="index % 2 === 0 ? 'pink' : 'green'"
+            >
+              <v-card class="rounded-xl">
+                <v-card-title :color="index % 2 === 0 ? 'pink' : 'green'">
+                  {{ exper.title }}
+                </v-card-title>
+                <v-card-text>
+                  <b>{{ exper.date }}</b
+                  ><br />
+                  <b>@{{ exper.institute }}</b
+                  ><br />
+                  {{ exper.decription }}
+                </v-card-text>
+              </v-card>
+            </v-timeline-item>
+          </v-timeline>
+        </v-container>
       </section>
       <section class="portfolio">
         <h4 class="display-2 text-center">Portafolio</h4>
@@ -209,16 +193,11 @@
           </v-slide-item>
         </v-slide-group>
       </section>
-      <section class="contact-us pt-10">
-        <v-img
-          class="pt-10"
-          gradient="to bottom, rgb(166 199 156), rgb(227 227 227 / 86%)"
-          src="https://img.freepik.com/free-photo/contact-us_36325-2135.jpg?size=626&ext=jpg"
-        >
+      <section class="contact-us pt-10 color">
+       
           <v-container>
             <h4 class="display-1 text-center mb-5">
-              Hola soy jorge Desarollador FullStack y estoy disponible para
-              trabajar con ustedes y sus proyectos
+              Estoy disponible para trabajar con ustedes y sus proyectos
             </h4>
             <v-divider />
             <br />
@@ -255,7 +234,7 @@
               </v-col>
             </v-row>
           </v-container>
-          <v-footer class="mt-4">
+          <v-footer class="mt-4 color2">
             <v-col class="text-center" cols="12">
               <strong
                 >{{ new Date().getFullYear() }}
@@ -263,7 +242,7 @@
               </strong>
             </v-col>
           </v-footer>
-        </v-img>
+        
       </section>
     </v-main>
   </v-app>
@@ -315,8 +294,38 @@ export default {
 };
 </script>
 <style>
+.logo {
+  height: 11rem;
+}
 .v-tab.active-tab {
   color: #e91e63;
+}
+.color {
+  background: #373b44; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #373b44,
+    #4286f4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #373b44,
+    #4286f4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.color2 {
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .v-tab.active-tab::before {
