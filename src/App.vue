@@ -11,11 +11,10 @@
         <v-tab href="#home">Home</v-tab>
         <v-tab>Acerca de mi</v-tab>
         <v-tab>Portafolio</v-tab>
-        <v-tab>Blog</v-tab>
         <v-tab>Contacto</v-tab>
       </v-tabs>
       TODO:crear la funcionalidad enviar correo electronio
-      <v-btn large color="green" class="white--text ml-10"
+      <v-btn large class="white--text ml-10 boton"
         >Envíame un correo electrónico</v-btn
       >
     </v-app-bar>
@@ -24,19 +23,18 @@
         <v-row class="align-center px-10" style="height: 690px">
           <v-col lg="6" cols="6" class="pa-6 font-weight-bold py-16">
             <h2 class="display-3">
-              Programador <span class="green--text">FullStack</span> En
-              <span class="yellow--text">Javascript</span>
+              Programador <span class="blue--text">FullStack</span> En
+              <span class="orange--text">Javascript</span>
             </h2>
             <v-subheader
-              >.Hola, soy Jorge, me enfoco en programar con pasion y creatividad
+              >Hola soy Jorge, me enfoco en programar con pasion y creatividad
             </v-subheader>
             <br />
             <br />
             <v-btn
               large
               elevation="5"
-              color="pink"
-              class="white--text mt-10 ml-10 px-10 py-5"
+              class="white--text mt-10 ml-10 px-10 py-5 boton"
               >Contacto
             </v-btn>
             <v-row class="mt-16">
@@ -73,7 +71,7 @@
                 color="#e1e0e0c9"
                 elevation="6"
               >
-                <v-card-subtitle class="green--text">SOBRE MI </v-card-subtitle>
+                <v-card-subtitle class="">SOBRE MI </v-card-subtitle>
                 <h2 class="display-1 font-weight-regular">
                   Full Stack Developer apasionado por la programación, con ganas
                   de seguir creciendo en el área TI y poner en practica nuevas
@@ -82,8 +80,7 @@
                 <v-btn
                   large
                   elevation="5"
-                  color="pink"
-                  class="white--text mt-10 px-10 py-5"
+                  class="white--text mt-10 px-10 py-5 boton"
                   >Descargar cv
                   <v-icon>mdi-download</v-icon>
                 </v-btn>
@@ -116,11 +113,11 @@
                 <div class="d-flex align-center justify-space-between">
                   <div class="">
                     <h2>FullStack Javascript</h2>
-                    <span> Noviembre 2020 - Present</span>
+                    <span> Noviembre 2020 </span>
                   </div>
-                  <a class="green--text">
+                  <a class="blue--text">
                     Desafio latam
-                    <v-icon color="green"
+                    <v-icon color="white"
                       >https://desafiolatam.com/chile/full-stack-javascript/?utm_source=google&utm_medium=search&utm_campaign=full_stack_javascript_agosto_2021&utm_content=empleo&utm_term=programador%20full%20stack%20que%20es&utm_campaign=full_stack_javascript_agosto_2021&utm_source=adwords&utm_medium=ppc&hsa_acc=1239562006&hsa_cam=13072221065&hsa_grp=125869136127&hsa_ad=570234668858&hsa_src=g&hsa_tgt=kwd-832495968719&hsa_kw=programador%20full%20stack%20que%20es&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiAraSPBhDuARIsAM3Js4oHyTBtaLbEPU_MbK_Ttt2mXS6_FF3ut8NAFNs0d5Q71srg-rl3HIoaAiZfEALw_wcB</v-icon
                     ></a
                   >
@@ -138,11 +135,12 @@
                 <div class="d-flex align-center justify-space-between">
                   <div class="">
                     <h2>Hoteleria AIEP</h2>
-                    <span>March 2015-2017 </span>
+                    <span>Marzo 2015-2017 </span>
                   </div>
-                  <a class="green--text"
-                    ><v-icon color="green">mdi-link</v-icon></a
-                  >
+                  <a class="blue--text">
+                    AIEP
+                    <v-icon color="white">mdi-link</v-icon>
+                  </a>
                 </div>
                 <v-card-text>
                   competencias para administrar las operaciones que dan origen a
@@ -160,15 +158,15 @@
       </section>
       <section class="experiance color py-6">
         <v-container>
-          <h4 class="display-2 text-center">Experience</h4>
+          <h4 class="display-2 text-center">Experiencia</h4>
           <v-timeline>
             <v-timeline-item
               v-for="(exper, index) in experience"
               :key="index"
-              :color="index % 2 === 0 ? 'pink' : 'green'"
+              :color="index % 2 === 0 ? 'boton' : 'color2'"
             >
               <v-card class="rounded-xl">
-                <v-card-title :color="index % 2 === 0 ? 'pink' : 'green'">
+                <v-card-title :color="index % 2 === 0 ? 'boton' : 'color2'">
                   {{ exper.title }}
                 </v-card-title>
                 <v-card-text>
@@ -194,55 +192,49 @@
         </v-slide-group>
       </section>
       <section class="contact-us pt-10 color">
-       
-          <v-container>
-            <h4 class="display-1 text-center mb-5">
-              Estoy disponible para trabajar con ustedes y sus proyectos
-            </h4>
-            <v-divider />
-            <br />
-            <v-row>
-              <v-col cols="12" lg="6">
-                <v-card-title>DROP A LINE</v-card-title>
-                <v-form>
-                  <v-text-field label="Nombre" />
-                  <v-text-field label="Email" />
-                  <v-text-field label="Motivo" />
-                  <v-textarea label="Mensaje" />
-                  <v-btn large color="green" class="white--text"
-                    >Enviar mensaje
-                  </v-btn>
-                </v-form>
-              </v-col>
-              <v-col cols="12" lg="3" offset="2">
-                <v-card-title>CONTACTO</v-card-title>
-                <v-card-text>
-                  Santiago,Chile<br />
-                  +56954247771 <br />
-                  jorgerioschile@gmail.com <br />
-                </v-card-text>
-                <v-card-actions>
-                  <v-btn
-                    large
-                    elevation="5"
-                    color="pink"
-                    class="white--text mt-10 px-10 py-5"
-                    >Descargar cv
-                    <v-icon>mdi-download</v-icon>
-                  </v-btn>
-                </v-card-actions>
-              </v-col>
-            </v-row>
-          </v-container>
-          <v-footer class="mt-4 color2">
-            <v-col class="text-center" cols="12">
-              <strong
-                >{{ new Date().getFullYear() }}
-                <a href="" class="green--text"></a>
-              </strong>
+        <v-container>
+          <h4 class="display-1 text-center mb-5">
+            Estoy disponible para trabajar con ustedes y sus proyectos
+          </h4>
+          <v-divider />
+          <br />
+          <v-row>
+            <v-col cols="12" lg="6">
+              <v-card-title></v-card-title>
+              <v-form>
+                <v-text-field label="Nombre" />
+                <v-text-field label="Email" />
+                <v-text-field label="Motivo" />
+                <v-textarea label="Mensaje" />
+                <v-btn large  class="white--text boton"
+                  >Enviar mensaje
+                </v-btn>
+              </v-form>
             </v-col>
-          </v-footer>
-        
+            <v-col cols="12" lg="3" offset="2">
+              <v-card-title>CONTACTO</v-card-title>
+              <v-card-text>
+                Santiago,Chile<br />
+                +56954247771 <br />
+                jorgerioschile@gmail.com <br />
+              </v-card-text>
+              <v-card-actions>
+                <v-btn
+                  large
+                  elevation="5"
+                  class="white--text mt-10 px-10 py-5 boton"
+                  >Descargar cv
+                  <v-icon>mdi-download</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </v-col>
+          </v-row>
+        </v-container>
+        <v-footer class="mt-4 color2">
+          <v-col class="text-center" cols="12">
+            <img class="logo pt-5" :src="require('/src/assets/logo-jr.png')" />
+          </v-col>
+        </v-footer>
       </section>
     </v-main>
   </v-app>
@@ -311,7 +303,8 @@ export default {
     to right,
     #373b44,
     #4286f4
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: #232526;
 }
 
 .color2 {
@@ -330,5 +323,19 @@ export default {
 
 .v-tab.active-tab::before {
   background-color: #4caf50;
+}
+
+.boton {
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f5af19,
+    #f12711
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f5af19,
+    #f12711
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 </style>
