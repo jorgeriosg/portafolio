@@ -15,6 +15,7 @@
       </v-tabs>
       TODO:crear la funcionalidad enviar correo electronio
       <v-btn large class="white--text ml-10 boton"
+     
         >Envíame un correo electrónico</v-btn
       >
     </v-app-bar>
